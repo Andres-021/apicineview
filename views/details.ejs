@@ -1,0 +1,46 @@
+
+<header>
+  <%- include('./partials/navBar', {user: user}); %>
+</header>
+
+<% if(typeof details != "undefined"){ %>
+  <div class="banner" id="banner">
+    <!-- <img src="https://image.tmdb.org/t/p/original/zGLHX92Gk96O1DJvLil7ObJTbaL.jpg"> -->
+    <div class="poster">
+      <img src="https://image.tmdb.org/t/p/w500/<%= details.poster_path %>">
+    </div>
+
+    <div class="content">
+      <h2><%= details.title %></h2>
+      <ul class="details-content">
+        <% details.genres.forEach((genres) => { %>
+        <li><%= genres.name %></li>
+        <% }) %>
+      </ul>
+      <h5>Resumen</h5>
+      <p><%= details.overview %></p>
+      
+      <!-- <a href="#" class="play"><img> Ver trailer</a> -->
+    </div>
+
+    <div class="slide"></div>
+    <!-- <ul class="sci">
+      <li><a href="#">Facebook - img</a></li>
+      <li><a href="#">Facebook - img</a></li>
+      <li><a href="#">Facebook - img</a></li>
+    </ul> -->
+  </div>
+  
+  <div class="content-video">
+    
+  </div>
+
+
+  <script>
+    var img = document.getElementById('banner');
+    img.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://image.tmdb.org/t/p/original/<%= details.backdrop_path %>')";
+    img.style.backgroundPosition = 'center';
+    img.style.backgroundSize = 'cover';
+
+  </script>
+<% } %>

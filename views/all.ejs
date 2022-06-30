@@ -1,0 +1,24 @@
+
+<header>
+  <%- include('./partials/navBar', {user: user}); %>
+</header>
+
+<div class="div-row-content-all">
+  <div class="div-row-all-item1">
+    <form action="/users/search" method="GET" class="">
+      <input type="search" name="search" placeholder="Buscar">
+    </form>
+  </div>
+
+  
+  
+  <div class="container">
+    <!-- Card para listas las peliculas -->
+    <% if(typeof watchs != "undefined"){ %>
+      <% watchs.forEach((watch)=>{%>
+        <%- include('./partials/card',{watch: watch}) %>
+      <% })%>
+    <% } %>
+  
+  </div>
+</div>

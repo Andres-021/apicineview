@@ -1,0 +1,34 @@
+
+<div class="login-form">
+  <h2>login</h2>
+  <form action="/login" method="POST">
+    <div>
+      <input type="text" name="userLogin" id="" placeholder="Usuario">
+    </div>
+    <div>
+      <input type="password" name="password" id="" placeholder="Contraseña">
+    </div>
+    <div>
+      <input class="btn-login" type="submit" value="login">
+    </div>
+  </form>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<% if(typeof alert != "undefined"){%>
+
+  <script>
+    Swal.fire({
+      width: 'auto',
+      padding: '',
+      title: '<%= alertTitle %>',
+      icon: '<%= alertIcon %>',
+      showConfirmButton: '<%= showConfirmButton %>',
+      timer: '<%= timer %>',
+
+    }).then(() => {
+      // Redirigimos a la ruta correcta
+      window.location="/<%= ruta%>"
+    })
+  </script>
+<% } %>

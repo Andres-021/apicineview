@@ -1,0 +1,37 @@
+<nav class="cajaNav">
+  <div class="titNav">
+    <div class="logo">LOGO</div>
+    <div class="toggle" onclick="alternar('menu')">Abrir</div>
+  </div>
+  <ul class="barNav cerrado" id="menu">
+    <li><a href="#">Notificaciones</a></li>
+    <li id="photo"><a href="/profile"><img src="../../resources/img/profile.jpeg" alt="perfil"></a></li>
+    <!-- <li><a>profile</a>
+      <ul>
+        <li><a>Perfil</a></li>
+        <li><a>Opciones</a></li>
+      </ul>
+    </li> -->
+    
+  </ul>
+</nav>
+
+<script>
+  function alternar(menu)
+  {
+     var oMenu = document.getElementById(menu);
+     //Si el menu tiene clase abierto
+     //cambia clase a cerrado y cambia el botón
+    if (oMenu.classList.contains('abierto')){
+      oMenu.classList.remove('abierto');
+      oMenu.classList.add('cerrado');
+      event.target.innerText = 'Abrir'
+    }
+    //Si no está abierto, cambia clase a abierto y cambia el botón
+    else{
+      oMenu.classList.remove('cerrado');
+      oMenu.classList.add('abierto');
+      event.target.innerText = 'Cerrar'
+    }
+  }
+  </script>

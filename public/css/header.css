@@ -1,0 +1,125 @@
+/* Navbar */
+/* CSS Document */
+
+
+
+ul{
+  list-style: none;
+}
+
+.cajaNav{
+  display:flex;
+  justify-content: space-between;
+  background:var(--bgcolor);
+  color: var(--separatorcolor);
+}
+.cajaNav .barNav{
+  margin:0 20px 0 0;
+  position: fixed;
+}
+.cajaNav .titNav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex: 1;
+  background:var(--bgcolor);
+  color:var(--separatorcolor);
+  height:auto;
+}
+.cajaNav .titNav .toggle{
+  display:none;
+}
+.cajaNav .titNav .logo{
+  margin: 12px 10px; 
+}
+.cajaNav .barNav {
+  display:flex;
+  list-style:none;
+  align-items: center;
+  padding:0;
+  position: sticky;
+}
+.cajaNav .barNav li{
+  display:flex;
+  align-items:center;
+  padding: 0 20px ;
+  height:100%;
+}
+.cajaNav .barNav li:hover{
+  background: var(--hovercolor);
+  color:var(--separatorcolor);
+  cursor: pointer;
+}
+.cajaNav .barNav li a{
+  text-decoration: none;
+  cursor: pointer;
+  color:inherit;
+}
+
+
+.cajaNav .barNav #photo{
+  box-sizing: border-box;
+  padding: 0 20px ;
+  margin: 0 auto;
+}
+
+.cajaNav .barNav #photo img{
+  border-radius: 50%;
+  height: 35px;
+}
+
+
+/* 
+.cajaNav>.barNav>li>a{
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+.cajaNav>.barNav>li>a:hover{
+  color: black;
+}
+
+.cajaNav>.barNav>li{
+  float: left;
+  text-align:center
+}
+.cajaNav>.barNav>li>ul{
+  display: none;
+}
+.cajaNav>.barNav>li:hover>ul {
+  display:block;
+} */
+
+/* Para cuando la pantalla sea pequeña */
+@media (max-width: 576px){
+  .cajaNav{
+     flex-direction: column;
+     align-items:flex-end;
+     background: unset;
+  }
+  .cajaNav .barNav{
+     color:black;
+     background:white;
+     flex-direction:column;
+     display:none;
+  }
+  .cajaNav .barNav li {
+     padding: 10px 20px;
+  }
+  .cajaNav .barNav li:hover{
+     background: var(--separatorcolor);
+     color: var(--hovercolor);
+  }
+  .cajaNav .titNav{
+     width: 100%;
+     align-items:center;
+  }
+  .cajaNav .titNav .toggle{
+     display:block;
+     margin-right:10px;
+     cursor:pointer
+  }
+  .abierto{display:flex !important}
+  .cerrado{display:none !important}
+  }
+  

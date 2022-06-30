@@ -1,0 +1,19 @@
+<h1>No tiene acceso a esta pagina</h1>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<% if(typeof alert != "undefined"){%>
+
+  <script>
+    Swal.fire({
+      width: 'auto',
+      padding: '',
+      title: '<%= alertTitle %>',
+      icon: '<%= alertIcon %>',
+      showConfirmButton: '<%= showConfirmButton %>',
+      timer: '<%= timer %>',
+
+    }).then(() => {
+      // Redirigimos a la ruta correcta
+      window.location="/<%= ruta%>"
+    })
+  </script>
+<% } %>
