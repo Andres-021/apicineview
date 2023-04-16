@@ -9,10 +9,12 @@
   --width-collapsed: 50px;
 }
 
-.login-form{
+/* .login-form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 300px;
-  margin:0 auto;
-}
+} */
 .login-form h1 {
   text-align: center;
   color: midnightblue;

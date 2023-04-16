@@ -7,8 +7,12 @@ body{
   font-size: 18px;
   padding: 0;
   margin: 0;
+  /* box-sizing: border-box; */
   /* Para que la barra aparezca oculta */
   /* margin-left: var(--width-collapsed); */
+}
+
+.principal{
   margin-left: var(--width);
 }
 
@@ -61,7 +65,7 @@ body{
 }
 
 #sidemenu #header #menu-btn:hover{
- background-color: var(--hovercolor);
+  background-color: var(--hovercolor);
 }
 
 #sidemenu #header #menu-btn .btn-menu{

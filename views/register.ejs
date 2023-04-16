@@ -1,7 +1,8 @@
+<header>
+  <%- include('./partials/navBar', {user: user}); %>
+</header>
 
-  <header>
-    <%- include('./partials/navBar', {user: user}); %>
-  </header>
+<div class="principal">
   <div class="div-row">
     <div class="register-form">
       <h1>Registro</h1>
@@ -21,12 +22,12 @@
             <option value="mod">Mod</option>
           </select>
         </div>
-
+  
         <input type="submit" class="btn-primary" value="Registrar">
-
+  
       </form>
     </div>
-
+  
     <div class="permissions-form">
       <h1>Permisos</h1>
       <form action="/permissions" method="POST">
@@ -36,44 +37,45 @@
             <input type="checkbox" id="coding" name="interest" value="coding">
             <label for="coding">Agregar</label>
           </div>
-
+  
           <div>
             <input type="checkbox" id="music" name="interest" value="music">
             <label for="music">Editar</label>
           </div>
-
+  
           <div>
             <input type="checkbox" id="music" name="interest" value="music">
             <label for="music">Eliminar</label>
           </div>
-
+  
           <div>
             <input type="checkbox" id="music" name="interest" value="music">
             <label for="music">Obtener</label>
           </div>
         </div>
-        
+  
         <input type="text" name="email" placeholder="Correo">
-
+  
         <input type="submit" class="btn-primary" value="Permitir">
         <input type="submit" class="btn-cancel" value="Denegar">
-
+  
       </form>
     </div>
   </div>
-  
 
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <% if(typeof alert != "undefined"){%>
+</div>
 
-    <script>
-      Swal.fire({
-        width: 'auto',
-        padding: '',
-        title: '<%= alertTitle %>',
-        icon: '<%= alertIcon %>',
-        showConfirmButton: '<%= showConfirmButton %>',
-        timer: '<%= timer %>',
-      })
-    </script>
-    <% } %>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<% if(typeof alert !="undefined" ){%>
+
+  <script>
+    Swal.fire({
+      width: 'auto',
+      padding: '',
+      title: '<%= alertTitle %>',
+      icon: '<%= alertIcon %>',
+      showConfirmButton: '<%= showConfirmButton %>',
+      timer: '<%= timer %>',
+    })
+  </script>
+  <% } %>

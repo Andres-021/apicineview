@@ -1,102 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../resources/css/navBar.css">
-  <link rel="stylesheet" href="../resources/css/header.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-</head>
-    <body>
-        <%- include('./header'); %>
-      
-      <div id="sidemenu" class="menu-expanded">
-        <!-- Navbar o header -->
-        <div id="header">
-          <div id="title"><span>Verq</span></div>
-          <div id="menu-btn">
-            <div class="btn-menu"></div>
-            <div class="btn-menu"></div>
-            <div class="btn-menu"></div>
-          </div>
-        </div>
 
-        <!-- Profile -->
-        <div id="profile">
-          <!-- Para ubicar la imagen del usuario  -->
-          <!-- <div id="photo"><img src="../../resources/img/profile.jpeg" alt="perfil"></div>
-          <a id="name" href="/profile">editar perfil</a>
-          <div id="name"><span><%= user.name %></span>&nbsp;<span><%= user.surname %></span></div> -->
-          <a id="name" class="" href="/logout">Salir</a>
-        </div>
+<%- include('./header'); %>
+<div class="principal">
 
-        <!-- items -->
-        <div id="menu-items">
+  <div id="sidemenu" class="menu-expanded">
+    <!-- Navbar o header -->
+    <div id="header">
+      <div id="title"><span>Verq</span></div>
+      <!-- <div id="menu-btn">
+        <div class="btn-menu"></div>
+        <div class="btn-menu"></div>
+        <div class="btn-menu"></div>
+      </div> -->
+    </div>
 
-          <div class="item" id="dashboard">
-            <a class="link" href="/">
-              <div class="icon"><img src="../../resources/img/icons8-dashboard-layout-material-outlined/icons8-dashboard-layout-48.png"></div>
-              <div class="title">Dashboard</div>
-            </a>
-          </div>
+    <!-- Profile -->
+    <div id="profile">
+      <!-- Para ubicar la imagen del usuario  -->
+      <!-- <div id="photo"><img src="../../resources/img/profile.jpeg" alt="perfil"></div> -->
+      <!-- <a id="name" href="/profile">editar perfil</a> -->
+      <div id="name"><span><%= user.name %></span>&nbsp;<span><%= user.surname %></span></div>
+      <a id="name" class="" href="/logout">Salir</a>
+    </div>
 
-          <div class="item" id="todo">
-            <a class="link" href="/all">
-              <div class="icon"><img src="../../resources/img/icons8-carrete-de-película-material-outlined/icons8-carrete-de-película-48.png"></div>
-              <div class="title">Todo</div>
-            </a>
-          </div>
+    <!-- items -->
+    <div id="menu-items">
 
-          <div class="item" id="agregar-usuario">
-            <a class="link" href="/registration">
-              <div class="icon"><img src="../../resources/img/icons8-añadir-usuario-masculino-material-outlined/icons8-añadir-usuario-masculino-48.png"></div>
-              <div class="title">Agregar usuario</div>
-            </a>
-          </div>
-
-          <div class="item" id="ver-usuarios">
-            <a class="link" href="/users">
-              <div class="icon"><img src="../../resources/img/icons8-lista-material-outlined/icons8-lista-48.png"></div>
-              <div class="title">Usuarios</div>
-            </a>
-          </div>
-
-          <div class="item" id="ver-usuarios">
-            <a class="link" href="/chats">
-              <div class="icon"><img src="../../resources/img/icons8-comunicación-material-outlined/icons8-comunicación-48.png"></div>
-              <div class="title">Chat</div>
-            </a>
-          </div>
-        </div>
-
+      <div class="item" id="dashboard">
+        <a class="link" href="/">
+          <div class="icon"><img src="../../resources/img/icons8-dashboard-layout-material-outlined/icons8-dashboard-layout-48.png"></div>
+          <div class="title">Dashboard</div>
+        </a>
       </div>
 
+      <div class="item" id="todo">
+        <a class="link" href="/all">
+          <div class="icon"><img src="../../resources/img/icons8-carrete-de-película-material-outlined/icons8-carrete-de-película-48.png"></div>
+          <div class="title">Todo</div>
+        </a>
       </div>
 
-      <script>
-        const btn = document.querySelector('#menu-btn');
-        const menu = document.querySelector('#sidemenu');
-        // const btnItem = document.querySelector('.item');
-        
-        // var url = window.location.pathname;
-        // var filename = url.substring(url.lastIndexOf('/')+1);
+      <div class="item" id="agregar-usuario">
+        <a class="link" href="/registration">
+          <div class="icon"><img src="../../resources/img/icons8-añadir-usuario-masculino-material-outlined/icons8-añadir-usuario-masculino-48.png"></div>
+          <div class="title">Agregar usuario</div>
+        </a>
+      </div>
 
-        // btnItem.addEventListener('click', e => {
+      <div class="item" id="ver-usuarios">
+        <a class="link" href="/users">
+          <div class="icon"><img src="../../resources/img/icons8-lista-material-outlined/icons8-lista-48.png"></div>
+          <div class="title">Usuarios</div>
+        </a>
+      </div>
+    </div>
 
-        //   document.querySelector('.item').classList.toggle('body-expanded');
-        // })
+  </div>
 
-        btn.addEventListener('click', e => {
-          menu.classList.toggle('menu-expanded');
-          menu.classList.toggle('menu-collapsed');
+</div>
 
-          document.querySelector('body').classList.toggle('body-expanded')
-        });
+<script>
+  const btn = document.querySelector('#menu-btn');
+  const menu = document.querySelector('#sidemenu');
 
-      </script>
-    </body>
-</html>
+  // margin-left: var(--width-collapsed);
+
+  btn.addEventListener('click', e => {
+    menu.classList.toggle('menu-expanded');
+    menu.classList.toggle('menu-collapsed');
+
+    document.querySelector('principal').classList.toggle('body-expanded')
+  });
+
+</script>
