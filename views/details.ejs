@@ -9,6 +9,7 @@
       <!-- <img src="https://image.tmdb.org/t/p/original/zGLHX92Gk96O1DJvLil7ObJTbaL.jpg"> -->
       <div class="poster">
         <img src="https://image.tmdb.org/t/p/w500/<%= details.poster_path %>">
+        <button class="btn-primary">REGISTRAR</button>
       </div>
   
       <div class="content">
@@ -21,6 +22,17 @@
         <h5>Resumen</h5>
         <p><%= details.overview %></p>
         
+
+        
+        <div class="">
+          <form action="" method="POST">
+            <div>
+              <input type="file" name="video" id="video">
+            </div>
+            <input type="text" name="url" id="url" placeholder="URL del video">
+            <button class="btn-primary" style="width: auto; height: auto;" id="add">Agregar</button>
+          </form>
+        </div>
         <!-- <a href="#" class="play"><img> Ver trailer</a> -->
       </div>
   
@@ -38,6 +50,13 @@
   
   <% } %>
 </div>
+
+<script>
+  const btnAdd = document.getElementById('add');
+  btnAdd.addEventListener('click', (e) => {
+    e.preventDefault();
+  });
+</script>
 
 <script>
   var img = document.getElementById('banner');

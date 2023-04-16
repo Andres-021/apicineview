@@ -29,6 +29,14 @@ border: 1px solid #ced4da;
 margin-bottom: 10px;
 box-sizing:border-box;
 }
+
+input[type="text"] {
+  width: 80%;
+  padding: 15px;
+  border: 1px solid #ced4da;
+  /* margin-bottom: 10px; */
+  box-sizing:border-box;
+  }
 /*estilos botón LOGIN*/
 .btn-login{
   width: 100%;
