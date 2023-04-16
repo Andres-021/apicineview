@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
 </head>
-  <% if(typeof login != 'undefined' && typeof login === true){%>
     <body>
         <%- include('./header'); %>
       
@@ -98,12 +97,6 @@
           document.querySelector('body').classList.toggle('body-expanded')
         });
 
-
-        $(".menu_activo").removeClass("item_activo");
-        document.querySelector('body').classList.toggle('body-expanded');
-        $('.link[href="' + filename + '"]').addClass("item_activo");
-
       </script>
     </body>
-<% }%>
 </html>
